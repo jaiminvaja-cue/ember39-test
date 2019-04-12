@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = function(environment) {
+module.exports = function (environment) {
   let ENV = {
     modulePrefix: 'hands-on-ember',
     environment,
@@ -16,7 +16,11 @@ module.exports = function(environment) {
         Date: false
       }
     },
-
+    apiURL: 'http://embertaskapi.test',
+    'ember-local-storage': {
+      namespace: true, // will use the modulePrefix e.g. 'my-app'
+      keyDelimiter: '/' // will use / as a delimiter - the default is :
+    },
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
